@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO:EJERCICIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<style>
+    .rojo{
+        background-color: rgb(255, 89, 89);
+        border-radius: 20px;
+    }
+    .azul{
+        background-color: rgb(92, 163, 255);
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <h1>POO JS: EJERCICIO</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="formulario">
+
+                    <label for="codigo">Código: </label>
+                    <input type="number" name="codigo" id="codigo" class="form-control"><br><br>
+
+                    <label for="precio">Precio de compra: </label>
+                    <input type="number" name="precio" id="precio" class="form-control"><br><br>
+                    
+                    <label for="cantidadB">Cantidad en bodega: </label>
+                    <input type="number" name="cantidadB" id="cantidadB" class="form-control"><br><br>
+                    
+                    <label for="cantidadM">Canridad mínima requerida en bodega: </label>
+                    <input type="number" name="cantidadM" id="cantidadM" class="form-control"><br><br>
+                    
+                    <input type="button" value="Enviar" class="btn btn-danger" id="boton">
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div id="cartas">
+                    
+                </div>                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="poo_js_ejercicio1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

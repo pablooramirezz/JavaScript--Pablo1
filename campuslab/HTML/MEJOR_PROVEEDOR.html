@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<style>
+    h1{
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1><i>LISTADO DE PRECIOS DE PROVEEDORES 2023</i></h1>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>PROVEEDOR</th>
+                        <th>PRODUCTO</th>
+                        <th>PRECIO 2022</th>
+                        <th>PRECIO 2023</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <td id="proveedor"></td>
+                    <td id="producto"></td>
+                    <td id="pre2022"></td>
+                    <td id="pre2023"></td>
+                </tbody>
+                
+
+            </table>
+        </div>
+    </div>
+
+
+
+
+    
+
+
+
+
+
+
+
+    <script>
+        let proveedor = prompt("Ingrese el nombre del proveedor: ")
+        let producto = prompt ("Ingrese el nombre del producto: ")
+        let pasado = Number(prompt("Precio del producto en 2022:"))
+        let actual = Number(prompt("Precio del producto en 2023:"))
+
+        document.getElementById("proveedor").innerHTML=`${proveedor}`
+        document.getElementById("producto").innerHTML=`${producto}`
+        document.getElementById("pre2022").innerHTML=`${pasado}`
+        document.getElementById("pre2023").innerHTML=`${actual}`
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

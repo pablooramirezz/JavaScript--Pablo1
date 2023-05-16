@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo LocalStorage</title>
+</head>
+<body>
+
+    <h1>Ejemplo LocalStorage</h1>
+
+    <script>
+        localStorage.Apellido = 'Ramírez'; //Tipo objeto
+        localStorage.setItem('Nombre', 'Pablo'); //Tipo mapa
+        
+        let nombre = localStorage.Nombre;
+        let apellido = localStorage.getItem('Apellido');
+
+        alert(nombre + " " + apellido);
+
+        //for(let i=0; i<localStorage.length; i++) {
+        //    let key = localStorage.key(i);
+        //    console.log(`Llave: ${key} => Valor: ${localStorage.getItem(key)}`);
+        //}
+    
+        for(let k in localStorage) {
+            if(!localStorage.hasOwnProperty(k))
+            continue
+            console.log(`Llave: ${k} => Valor: ${localStorage.getItem(k)}`);
+        }
+
+        let keys = Object.keys(localStorage);
+        for(let key of keys) {
+            alert(`${key}: ${localStorage.getItem(key)}`);
+        }
+    </script>
+    
+</body>
+</html>

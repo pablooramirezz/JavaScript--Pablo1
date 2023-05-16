@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<style>
+    #titulo{
+        text-align: center;
+    }
+    .formulario{
+        text-align: center;
+    }
+    .mostrar{
+        text-align: center;
+    }
+    
+</style>
+<body>
+
+    <h1 id="titulo">Ejercicio - localStorage</h1>
+
+    <div class="formulario">
+        <form action="miformulario">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br><br>
+            <input type="text" name="" id="apellido" placeholder="Apellido"><br><br>
+            <input type="button" value="Guardar" id="boton1">
+        </form>
+    </div>
+    <hr width="80%">
+
+    <div class="mostrar">
+        <label for="mostrarNombre"><b>Nombre almacenado: </b></label>
+        <label for="" id="mostrarNombre"></label><br><br>
+
+        <label for="mostrarApellido"><b>Apellido almacenado: </b></label>
+        <label for="" id="mostrarApellido"></label><br><br>
+
+        <input type="button" value="Cargar elementos" id="boton2">
+        <hr width="80%">
+    </div>
+    
+
+    <script>
+        let boton1 = document.getElementById("boton1");
+        boton1.addEventListener("click", (el) => {
+
+        let nombre = document.getElementById('nombre').value;
+        let apellido = document.getElementById('apellido').value;
+
+        sessionStorage.Nombre = nombre;
+        sessionStorage.Apellido = apellido;
+
+        nombre = document.getElementById('nombre').value = " ";
+        apellido = document.getElementById('apellido').value = " ";
+
+        });
+
+        let boton2 = document.getElementById("boton2");
+        boton2.addEventListener("click", () => {
+            document.getElementById('mostrarNombre').innerHTML = sessionStorage.Nombre;
+            document.getElementById('mostrarApellido').innerHTML = sessionStorage.Apellido;
+
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El libro bonito</title>
+</head>
+<body>
+    <h1>LIBRERÍA "EL LIBRO FEO"</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="formulario">
+
+                    <label for="pactada">Fecha pactada: </label>
+                    <input type="date" name="pactada" id="pactada">
+
+                    <label for="real">Fecha de entrega real: </label>
+                    <input type="date" name="real" id="real">
+
+                    <input type="button" value="Sumit" id="validar" onclick="calcularMulta()">
+
+                    <h3>Días de retraso: <span id="retraso"></span></h3>
+                    <h4>Su multa por retraso de entrega es de: <span id="multa"></span></h4>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="ejercicioDate1.js"></script>
+</body>
+</html>

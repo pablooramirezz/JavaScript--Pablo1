@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Ejemplo</title>
+</head>
+<body>
+
+    <script>
+        console.log("Hola desde el navegador :p")
+    </script>
+    
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tabla de datos</title>
+  </head>
+  <body>
+    <label>Nombre:</label>
+    <input type="text" id="nombre"><br><br>
+    
+    <label>Edad:</label>
+    <input type="number" id="edad"><br><br>
+    
+    <button onclick="agregarDatos()">Agregar</button>
+    
+    <table id="tabla">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    
+    <script>
+        function agregarDatos() {
+        const nombre = document.getElementById("nombre").value;
+        const edad = document.getElementById("edad").value;
+
+        const tabla = document.getElementById("tabla").getElementsByTagName("tbody")[0];
+        const fila = tabla.insertRow();
+
+        const celdaNombre = fila.insertCell(0);
+        celdaNombre.innerHTML = nombre;
+
+        const celdaEdad = fila.insertCell(1);
+        celdaEdad.innerHTML = edad;
+        }       
+    </script>
+  </body>
+</html>

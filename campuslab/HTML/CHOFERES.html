@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/CHOFERES.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>Choferes</title>
+</head>
+<body>
+    <h1>The Big Old - Choferes</h1><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 mb-3 input-group">
+                <form action="" name="miformulario1" class="formulario">
+                    <div class="col-6">
+                        <label for="nombre" class="form-label me-2">Nombre del Chofer:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control-sm">
+                    </div><br>
+    
+                    <div class="col-6">
+                        <label for="lun">Kilomentros del Lunes: </label>
+                        <input type="text" name="lun" id="lun" class="form-control-sm">
+                    </div><br>
+    
+                    <div class="col-6">
+                        <label for="mar">Kilomentros del Martes: </label>
+                        <input type="text" id="mar" name="mar" class="form-control-sm">
+                    </div><br>
+    
+                    <div class="col-6">
+                        <label for="mier">Kilomentros del Miercoles: </label>
+                        <input type="text" id="mier" name="mier" class="form-control-sm">
+                    </div><br>
+    
+                    <div class="col-6">
+                        <label for="jue">Kilomentros del Jueves: </label>
+                        <input type="text" id="jue" name="jue" class="form-control-sm">
+                    </div><br>
+    
+                    <div class="col-6">
+                        <label for="vie">Kilomentros del Viernes: </label>
+                        <input type="text" id="vie" name="vie" class="form-control-sm">
+                    </div><br>
+
+                    <div class="col-6">
+                        <label for="vie">Kilomentros del Sábado: </label>
+                        <input type="text" id="sab" name="sab" class="form-control-sm">
+                    </div><br>
+    
+                    <input type="button" class="btn btn-outline-danger" value="Enviar" onclick="enviarTabla()">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <table id="tabla" class="table table-striped-columns">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Lun</th>
+                <th>Mar</th>
+                <th>Mie</th>
+                <th>Jue</th>
+                <th>Vie</th>
+                <th>Sab</th>
+                <th>Tot K</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col">
+            <h4>El chofer con mayor Kilometraje en la semana fue: </h4>
+        </div>
+    </div>
+
+
+
+
+<!-- Con JavaScript -->
+<script>
+
+const nombres = [];
+const totales = [];
+const maximo = 0;
+
+    function enviarTabla() {
+        let nombre = document.getElementById("nombre").value;
+        let lun = parseInt(document.getElementById("lun").value);
+        let mar = parseInt(document.getElementById("mar").value);
+        let mier = parseInt(document.getElementById("mier").value);
+        let jue = parseInt(document.getElementById("jue").value);
+        let vie = parseInt(document.getElementById("vie").value);
+        let sab = parseInt(document.getElementById("sab").value);
+        let tot = lun + mar + mier + jue + vie + sab;
+
+        nombres.push(nombre);
+        totales.push(tot);
+    
+        let tabla = document.getElementById("tabla").getElementsByTagName("tbody")[0];
+        let fila = tabla.insertRow();
+    
+        const celdaNombre = fila.insertCell(0);
+        celdaNombre.innerHTML = nombre;
+    
+        const celdaLun = fila.insertCell(1);
+        celdaLun.innerHTML = lun;
+    
+        const celdaMar = fila.insertCell(2);
+        celdaMar.innerHTML = mar;
+    
+        const celdaMier = fila.insertCell(3);
+        celdaMier.innerHTML = mier;
+    
+        const celdaJue = fila.insertCell(4);
+        celdaJue.innerHTML = jue;
+    
+        const celdaVie = fila.insertCell(5);
+        celdaVie.innerHTML = vie;
+    
+        const celdaSab = fila.insertCell(6);
+        celdaSab.innerHTML = sab;
+    
+        const celdaTot = fila.insertCell(7);
+        celdaTot.innerHTML = tot;
+        
+
+        maximo = Math.max(...totales)
+
+
+        document.getElementById("nombre").value = "" ;
+        parseInt(document.getElementById("lun").value = "");
+        parseInt(document.getElementById("mar").value ="");
+        parseInt(document.getElementById("mier").value ="");
+        parseInt(document.getElementById("jue").value ="");
+        parseInt(document.getElementById("vie").value ="");
+        parseInt(document.getElementById("sab").value ="");
+
+        
+
+    }
+    console.log(nombres);
+    console.log(totales);
+    console.log(maximo);
+</script>
+<!-- Con Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <p id="opSuma"></p>
+    <p id="opResta"></p>
+    <p id="opMul"></p>
+    <p id="opDiv"></p>
+
+    <script>
+        let numero1 = Number(prompt("Ingrese un número: "))
+        let numero2 = Number(prompt("Ingrese otro número: "))
+        let suma = numero1+numero2
+        let resta = numero1-numero2
+        let mul = numero1*numero2
+        let div = numero1/numero2
+        console.log(
+        `La suma es: ${suma} 
+        La resta es: ${resta}
+        La multiplicación es: ${mul}
+        La división es: ${div}`)
+        document.getElementById("opSuma").innerHTML=`El producto es: ${suma}`
+        document.getElementById("opResta").innerHTML=`El producto es: ${resta}`
+        document.getElementById("opMul").innerHTML=`El producto es: ${mul}`
+        document.getElementById("opDiv").innerHTML=`El producto es: ${div}`
+
+    </script>
+    
+</body>
+</html>
